@@ -17,13 +17,13 @@ public class Booking {
     @Column
     private String date;
 
-    @JsonManagedReference
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = true)
     private Customer customer;
 
     //@JsonIgnoreProperties(value = "bookings")
-    @JsonManagedReference
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "course_id", nullable = true)
     private Course course;
